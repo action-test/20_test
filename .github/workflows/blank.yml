@@ -1,0 +1,11 @@
+name: Reminder Bot
+
+on:
+  schedule:
+        - cron: "*/5 * * * *"
+  issue_comment:
+        types: [created]
+    
+jobs:
+  call-workflow-passing-data:
+   uses: action-test/example/.github/workflows/test_reminder.yml@main
